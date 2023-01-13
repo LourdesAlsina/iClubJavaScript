@@ -133,34 +133,30 @@ carrito(opcionMenu, medioPago)
     */
 
     //SEGUNDA PRE ENTREGA -------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+    let celu = ["Iphone 11", "Iphone 12", "Iphone 13", "Iphone 14"]
+alert("Tenemos " + celu.length + " "+"modelos de Iphones")
+alert("Los modelos disponibles son " + celu.join(", ") + " Para  consultar mas comunicate a nuestro wpp")
 
-    /*let celulares = ["Iphone 11", "Iphone 12", "Iphone 13", "Iphone 14"]
-alert("Tenemos en stock " + celulares.length + " "+"modelos de Iphones")
-alert("Los modelos disponibles son " + celulares.join(", ") + " Para mas consultar comunicate a nuestro wpp")*/
 
-
-/*Para consultar stock
+//Para consultar stock
 let celulares = ["Iphone 11", "Iphone 12", "Iphone 13", "Ihpone 14"]
 let iphone = prompt("Ingrese celular para consultar stock")
 if (celulares.indexOf(iphone) != -1) {
     alert(" Tenemos lo que busca en stock")
 } else {
     alert("No tenemos lo que busca en stock")
-} */
+} 
+
 
 const products = [
-    {id:1, iphone:"Iphone", modelo: "13 Pro Max blue", precio: 150.00, anio: 2022},
-    {id:2, iphone:"Iphone", modelo: "13 Pro Max gold", precio: 150.000, anio: 2022},
-    {id:3, iphone:"Iphone",modelo: "13 Max gold green", precio: 150.000, anio: 2022},
-    {id:4, iphone:"Iphone", modelo: "12 black", precio: 100.000, anio: 2020},
-    {id:5, funda:"Funda blanca", precio: 150.000},
-    {id:6, funda:"Funda aqua", precio: 150.000},
-    {id:7, funda:"Funda rosa", precio: 150.000},
-    {id:8, funda:"Funda Pride", precio: 150.000},
-    {id:9, accesorios:"Cargador 20w", precio: 5.000},
-    {id:10, accesorios:"Airpods", precio: 3.000},
-    {id:11, accesorios:"Come cable para cargador Toy Story", precio: 1.000},
-    {id:12, accesorios:"Come cable para cargador perrito", precio: 1.000},
+    {id:1, iphone:"Iphone", modelo: "13 Pro Max blue", precio: 150000, anio: 2022},
+    {id:2, iphone:"Iphone", modelo: "13 Pro Max gold", precio: 150000, anio: 2022},
+    {id:3, iphone:"Iphone",modelo: "13 Max gold green", precio: 150000, anio: 2022},
+    {id:4, iphone:"Iphone", modelo: "12 black", precio: 100000, anio: 2020},
+    {id:5, iphone:"Iphone", modelo: "13 Rojo", precio: 200000, anio: 2023},
+    {id:6, funda:"Funda blanca", precio: 3000},
+    {id:7, funda:"Funda aqua", precio: 3000},
 ]
 console.log(products)
 
@@ -183,73 +179,16 @@ console.log(categoriaCelular)
 let categoriaAccesorios = products.filter(products => products.iphone !== "Iphone")
 console.log(categoriaAccesorios)
 
-/*
-class producto {
-    static contadorProductos = 0
+//Buscador
 
-    constructor(nombre, precio){
-        this._idProducto = ++products.contadorProductos
-        this._nombre = nombre
-        this._precio= precio
-    }
-    get _idProducto(){
-        return this._idProducts
-    }
-    get nombre(){
-        return this._nombre
-    }
-    set nombre(nombre){
-        this._nombre= nombre
-    }
-    get precio(){
-        return this._precio
-    }
-    set precio(precio){
-        this._precio= precio
-    }
-    
-    toString(){
-        return  "idProducto: ${this._idProducto}, nombre:  ${this._nombre}, precio:  ${this._precio} ";
-    }
+let Buscador = document.getElementById("buscador")
+buscador.oninput = () => console.log( "Evento input")
+renderizarProductos(productosFiltrados)
+buscador.onchange = () => console.log( "Evento change")
+
+function filtrar() {
+    let productosFiltrados = products.filter(products => products.iphone.includes(buscador.value))
+    renderizarProductos(productosFiltrados)
+    console.log(productosFiltrados)
 }
-
-class orden {
-    static contadorOrdenes = 0
-
-    static get MAX_PRODUCTOS(){
-        return 5;
-    }
-    constructor(){
-        this._idOrden = ++orden.contadorOrdenes;
-        this._productos = [];
-        this._contadorProductosAgregados = 0;
-    }
-    get inOrden(){
-        return this._inOrden
-    }
-    agregarProducto(producto){
-        if (this._productos.length < orden.MAX_PRODUCTOS){
-        this._productos.push (producto)
-        this._productos (this._contadorProductosAgregados++) = producto
-        } else {
-            console.log("No se pueden agregar mas productos")        }
-    }
-    calcularTotal(){
-        let totalVenta = 0
-        for (let producto of this._productos){
-            totalVenta += producto.precio;//totalVenta = totalVenta + producto.precio
-        }
-        return totalVenta
-    }
-    mostrarOrden(){
-        let productosOrden = " ";
-        for (let producto of this._productos){
-            productosOrden += producto.toString() + " "
-        }
-        console.log( " Orden " $(this._idOrden) "Total" $(this.calcularTotal() "Productos: " $(productosOrden)));
-    }
-}
-
-let producto1 = new producto ("Iphone 12", 100.000)
-let producto2 = new producto ("Iphone 13", 150.000)
 */
