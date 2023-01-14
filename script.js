@@ -133,7 +133,7 @@ carrito(opcionMenu, medioPago)
     */
 
     //SEGUNDA PRE ENTREGA -------------------------------------------------------------------------------------------------------------------------------------------------------------
-/*
+
     let celu = ["Iphone 11", "Iphone 12", "Iphone 13", "Iphone 14"]
 alert("Tenemos " + celu.length + " "+"modelos de Iphones")
 alert("Los modelos disponibles son " + celu.join(", ") + " Para  consultar mas comunicate a nuestro wpp")
@@ -191,4 +191,4 @@ function filtrar() {
     renderizarProductos(productosFiltrados)
     console.log(productosFiltrados)
 }
-*/
+
